@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny Trends | Kids Clothing</title>
+  <style>
+      body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f7f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #f5b7b1;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: white;
+      border-bottom: 5px dotted #fcd5ce;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #ffe066;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    .hero {
+     
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .hero h2 {
+      font-size: 12rem;
+      background-color: rgba(0,0,0,0.3);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product {
+      background-color: #fef6e4;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #ff6f61;
+    }
+
+    select, button {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background-color: #ffb6b9;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff6f61;
+    }
+
+    #cart {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #fff0f5;
+      border-radius: 10px;
+    }
+	
+    footer {
+      background-color: #ffb6b9;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    function addToCart(productName, size) {
+      alert(`Added "${productName}" (Size: ${size}) to your cart.`);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Tiny Trends</h1>
+    <p>Stylish clothing for the little stars of South Africa</p>
+  </header>
+
+  <nav>
+    <a href="Home page.html">Home</a>
+    <a href="#Shop page.html">Shop</a>
+    <a href="#about page.html">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div>New Arrivals Just Landed!</div>
+  </section>
+
+    <div class="products">
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183891683-300-400/82c6237b-cecc-42dd-8c34-2a11aa2cda73.png?v=638803917179570000" alt="Girls Black Barbie Active Dress">
+        <h3>Girls Black Barbie Active Dress</h3>
+        <p>R199.99</p>
+        <select id="size1">
+          	<option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+
+        </select><br>
+        <button onclick="addToCart('Girls Black Barbie Active Dress', 199.99, document.getElementById('size1').value)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/179570971-300-400/667da97c-3d4c-44e4-bad8-520b57635176.png?v=638761570215200000" alt="Girl's Grey & Pink Bunny Sleepwear Set">
+        <h3>Girl's Grey & Pink Bunny Sleepwear Set</h3>
+        <p>R169.99</p>
+        <select id="size2">
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girl's Grey & Pink Bunny Sleepwear Set', 169.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183897737-300-400/0b627f6c-40f2-4a77-9f1b-38180384ffa8.png?v=638803919861830000" alt="Boys Stone Puffer Jacket">
+        <h3>Boys Stone Puffer Jacket</h3>
+        <p>R299.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boys Stone Puffer Jacket', 299.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/184008633-300-400/aad8cb52-6a5d-4737-a1dc-692f826060af.png?v=638804712906500000" alt="Boys Navy Mickey Mouse Onesie">
+        <h3>Boys Navy Mickey Mouse Onesie</h3>
+        <p>R199.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boys Navy Mickey Mouse Onesie', 199.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/184040203-300-400/42bdbe0e-1e37-451b-ab52-a28ad75412ca.png?v=638804781305730000" alt="Girl's Pink & Grey Check Pinafore & T-Shirt Set">
+        <h3>Girl's Pink & Grey Check Pinafore & T-Shirt Set</h3>
+        <p>R189.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girl's Pink & Grey Check Pinafore & T-Shirt Set', 189.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183973270-300-400/86b94f91-5edf-4d0c-bd6b-c0335f36d015.png?v=638804060911600000" alt="Girls Pink Parka Jacket">
+        <h3>Girls Pink Parka Jacket</h3>
+        <p>R349.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girls Pink Parka Jacket', 199.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183502323-300-400/2706f416-678b-48ac-8fa9-946bef5265d2.png?v=638799739386000000" alt="Boys Black/Red Cars Hoodie">
+        <h3>Boys Black/Red Cars Hoodie</h3>
+        <p>R155.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boys Black/Red Cars Hoodie', 155.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183887749-300-400/5660ce23-27cd-4ab9-bec6-48465f152941.png?v=638803914620100000" alt="Girls Pink Hello Kitty Leggings">
+        <h3>Girls Pink Hello Kitty Leggings</h3>
+        <p>R99.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girls Pink Hello Kitty Leggings', 99.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183501623-300-400/cfbff493-55ff-457f-8ed8-3a07167351db.png?v=638799739035500000" alt="Girls Navy Frozen Cropped Active Top">
+        <h3>Girls Navy Frozen Cropped Active Top</h3>
+        <p>R139.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girls Navy Frozen Cropped Active Top', 139.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183500672-300-400/640b489f-6262-443c-9d52-ed0a2190a024.png?v=638799738506530000" alt="Girls Black Love Rib T-Shirt">
+        <h3>Girls Black Love Rib T-Shirt</h3>
+        <p>R99.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girls Black Love Rib T-Shirt', 99.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183554319-300-400/15b428fc-9f50-4abd-95fb-39aae3c8f358.png?v=638800395340200000" alt=" Boys Black Cars T-Shirt">
+        <h3> Boys Black Cars T-Shirt</h3>
+        <p>R99.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart(' Boys Black Cars T-Shirt', 99.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183352158-300-400/8a26562e-318a-4c3f-a50f-5c823a46fd59.png?v=638798877540670000" alt="Girls Animal Print Flared Rib Leggings">
+        <h3>Girls Animal Print Flared Rib Leggings</h3>
+        <p>R199.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girls Animal Print Flared Rib Leggings', 199.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/182822952-300-400/027380fe-599f-451b-ba45-6b60d3ac5bcb.png?v=638793547704470000" alt="Boy's Quiksilver Corp Logo Crew Sweater">
+        <h3>Boy's Quiksilver Corp Logo Crew Sweater</h3>
+        <p>R599.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boy's Quiksilver Corp Logo Crew Sweater', 599.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/184044892-300-400/a7cfa041-6e4a-4676-bb83-530c5f6da4c6.png?v=638804791997800000" alt="Boys Stone Active Top">
+        <h3>Boys Stone Active Top</h3>
+        <p>R179.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boys Stone Active Top', 179.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+	  <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/182423877-300-400/e5b5d195-117b-477e-b1fe-accc7fc4fe19.png?v=638790089903570000" alt="Boy's Fatigue Camo Utility Pants">
+        <h3>Boy's Fatigue Camo Utility Pants</h3>
+        <p>R359.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boy's Fatigue Camo Utility Pants', 359.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	</div>
+  </section>
+
+  <section class="section" id="cart">
+    <h2>Your Shopping Cart</h2>
+    <ul id="cartItems">
+      <li>No items yet!</li>
+    </ul>
+  </section>
+
+  <footer>
+  &copy; 2025 Tiny Trends. All rights reserved.
+  </footer>
+  
+   <script>
+    const cartItems = [];
+
+    function addToCart(name, price, size) {
+      if (!size) {
+        alert("Please select a size before adding to cart!");
+        return;
+      }
+
+      const item = { name, price, size };
+      cartItems.push(item);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById("cartItems");
+      cartList.innerHTML = "";
+      if (cartItems.length === 0) {
+        cartList.innerHTML = "<li>No items yet!</li>";
+      } else {
+        cartItems.forEach((item, index) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - Size: ${item.size} - R${item.price.toFixed(2)}`;
+          cartList.appendChild(li);
+        });
+      }
+    }
+  </script>
+  
+</body>
+</html>

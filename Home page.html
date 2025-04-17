@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tiny Trends - Kids Clothing</title>
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f7f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #f5b7b1;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: white;
+      border-bottom: 5px dotted #fcd5ce;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #ffe066;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    .hero {
+     
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      background-color: rgba(0,0,0,0.3);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product {
+      background-color: #fef6e4;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #ff6f61;
+    }
+
+    select, button {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background-color: #ffb6b9;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff6f61;
+    }
+
+    #cart {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #fff0f5;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #ffb6b9;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tiny Trends</h1>
+    <p>Stylish clothing for the little stars of South Africa</p>
+  </header>
+
+  <nav>
+    <a href="Home page.html">Home</a>
+    <a href="Shop page.html">Shop</a>
+    <a href="about page.html">About</a>
+    <a href="contact page.html">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Where fashion meets fun!</h2>
+  </div>
+
+  <section class="section">
+    <h2>Our Best Sellers</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183891683-300-400/82c6237b-cecc-42dd-8c34-2a11aa2cda73.png?v=638803917179570000" alt="Girls Black Barbie Active Dress">
+        <h3>Girls Black Barbie Active Dress</h3>
+        <p>R199.99</p>
+        <select id="size1">
+          	<option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+
+        </select><br>
+        <button onclick="addToCart('Girls Black Barbie Active Dress', 199.99, document.getElementById('size1').value)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/179570971-300-400/667da97c-3d4c-44e4-bad8-520b57635176.png?v=638761570215200000" alt="Girl's Grey & Pink Bunny Sleepwear Set">
+        <h3>Girl's Grey & Pink Bunny Sleepwear Set</h3>
+        <p>R169.99</p>
+        <select id="size2">
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Girl's Grey & Pink Bunny Sleepwear Set', 169.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/183897737-300-400/0b627f6c-40f2-4a77-9f1b-38180384ffa8.png?v=638803919861830000" alt="Boys Stone Puffer Jacket">
+        <h3>Boys Stone Puffer Jacket</h3>
+        <p>R299.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boys Stone Puffer Jacket', 299.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+	  
+      <div class="product">
+        <img src="https://thefoschini.vtexassets.com/arquivos/ids/184008633-300-400/aad8cb52-6a5d-4737-a1dc-692f826060af.png?v=638804712906500000" alt="Boys Navy Mickey Mouse Onesie">
+        <h3>Boys Navy Mickey Mouse Onesie</h3>
+        <p>R199.99</p>
+        <select id="size2">
+          <option value="">Select size</option>
+            <option value="2-3Y">2-3 years</option>
+      	  	<option value="4-5Y">4-5 years</option>
+          	<option value="5-6Y">5-6 years</option>
+          	<option value="7-8Y">7-8 years</option>
+			<option value="9-10Y">9-10 years</option>
+			<option value="11-12Y">11-12 years</option>
+        </select><br>
+        <button onclick="addToCart('Boys Navy Mickey Mouse Onesie', 199.99, document.getElementById('size2').value)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cart">
+    <h2>Your Shopping Cart</h2>
+    <ul id="cartItems">
+      <li>No items yet!</li>
+    </ul>
+  </section>
+
+  <footer>
+   &copy; 2025 Tiny Trends. All rights reserved.
+  </footer>
+
+  <script>
+    const cartItems = [];
+
+    function addToCart(name, price, size) {
+      if (!size) {
+        alert("Please select a size before adding to cart!");
+        return;
+      }
+
+      const item = { name, price, size };
+      cartItems.push(item);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartList = document.getElementById("cartItems");
+      cartList.innerHTML = "";
+      if (cartItems.length === 0) {
+        cartList.innerHTML = "<li>No items yet!</li>";
+      } else {
+        cartItems.forEach((item, index) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - Size: ${item.size} - R${item.price.toFixed(2)}`;
+          cartList.appendChild(li);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
