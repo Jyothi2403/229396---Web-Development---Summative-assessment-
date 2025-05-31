@@ -1,0 +1,123 @@
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f7f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #f5b7b1;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: white;
+      border-bottom: 5px dotted #fcd5ce;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #ffe066;
+      display: flex;
+      justify-content: center;
+      padding: 0.75rem;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    .hero {
+     
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      background-color: rgba(0,0,0,0.3);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product {
+      background-color: #fef6e4;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #ff6f61;
+    }
+
+    select, button {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background-color: #ffb6b9;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff6f61;
+    }
+
+    #cart {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #fff0f5;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #ffb6b9;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
